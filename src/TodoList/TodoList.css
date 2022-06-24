@@ -1,0 +1,34 @@
+.TodoList{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.TodoList section{
+}
+.TodoList ul{
+    border: 1px;
+    border-radius: 5px;
+}
+.TodoList ul li{
+    background-color: aliceblue;
+    margin: 15px;
+    padding: 15px;
+    border: 1px;
+    border-radius: 5px;
+    display: flex;
+
+}
+.TodoList ul li span{
+    font-weight: bolder;
+    padding:0px 15px ;
+
+}
+li p{
+
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,16 @@
+.CreateTodoButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    padding: 15px 32px;
+    border-radius: 5px;
+}
+.CreateTodoButton:hover{
+    background-color: violet;
+}

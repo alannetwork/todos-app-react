@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# To Do App - A first project based on Platzi Course of React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The course is here [Curso de Introducción a React.js](https://platzi.com/cursos/react/).
 
 ## Available Scripts
 
