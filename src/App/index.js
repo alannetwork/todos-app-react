@@ -1,16 +1,27 @@
 import React from "react";
 import { AppUI } from "./AppUI";
 
-const defaultTodos=[
+/* const defaultTodos=[
   {text:'Cortar cebolla 1',completed: false },
   {text:'Hacer limpieza 2',completed: false },
   {text:'Preparar el desayuno 3',completed: false },
   {text:'Estudiar en platzi',completed: false },
-];
+]; */
 
 function App(props) {
 
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
+
+  let parsedTodos;
+
+  if (!localStorageTodos){
+    localStorage.setItem('TODOS_v1',JSON.stringify([]));
+    parsedTodos=[];
+  }else{
+    parsedTodos = JSON.parse(localStorageTodos);
+  }
+
+  const [todos, setTodos] = React.useState(parsedTodos);
 
   const [searchValue,setSearchValue] = React.useState('');
   const totalTodos = todos.length;
@@ -31,18 +42,24 @@ function App(props) {
 
   }
 
+  const saveTodos = (newTodos) =>{
+    const stringifiedTodos = JSON.stringify(newTodos);
+    localStorage.setItem('TODOS_V1',stringifiedTodos);
+    setTodos(newTodos);
+  }
+
   const completeTodos = (text) =>{
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
-    return setTodos(newTodos);
+    return saveTodos(newTodos);
   };
 
   const deleteTodos = (text) =>{
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos.splice(todoIndex,1);
-    return setTodos(newTodos);
+    return saveTodos(newTodos);
   };
 
 
