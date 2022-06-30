@@ -1,4 +1,7 @@
 .CreateTodoButton{
+    position: relative;
+    z-index: 1;
+    float: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +12,8 @@
     border: none;
     text-decoration: none;
     padding: 15px 32px;
-    border-radius: 5px;
+    margin: auto 15%;
+    border-radius: 25px;
 }
 .CreateTodoButton:hover{
     background-color: violet;
