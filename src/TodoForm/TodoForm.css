@@ -1,0 +1,25 @@
+.form-container {
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+
+}
+
+.btn-danger {
+   background-color: rgb(229, 116, 116);
+}
+
+.btn-add {
+   background-color: rgb(73, 198, 6);
+}

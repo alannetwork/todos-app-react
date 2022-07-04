@@ -1,13 +1,16 @@
-.TodoItem{
-    font-size: 24px;
-    text-align: center;
-    list-style: none;
+.TodoItem {
+  font-size: 24px;
+  text-align: center;
+  list-style: none;
 }
 
 .TodoItem-p--complete {
-    text-decoration: line-through;
-  }
+  text-decoration: line-through;
+}
 
+.Icon {
+  cursor: pointer;
+}
 .Icon-delete:hover {
-    color: red;
+  color: red;
 }
